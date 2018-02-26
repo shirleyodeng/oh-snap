@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180226153151) do
+ActiveRecord::Schema.define(version: 20180226170241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "photographer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "date", null: false
+    t.integer "hours", null: false
+    t.string "location", null: false
+    t.index ["photographer_id"], name: "index_bookings_on_photographer_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "photographers", force: :cascade do |t|
+    t.bigint "user_id"
+    t.text "description"
+    t.string "categories", array: true
+    t.string "city"
+    t.integer "hourly_rate"
+    t.string "photos", array: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_photographers_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -35,4 +59,7 @@ ActiveRecord::Schema.define(version: 20180226153151) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "photographers"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "photographers", "users"
 end

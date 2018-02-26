@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  description: MyText
+  categories: 
+  city: MyString
+  hourly_rate: 1
+  photos: 
+
+two:
+  user: two
+  description: MyText
+  categories: 
+  city: MyString
+  hourly_rate: 1
+  photos: 
