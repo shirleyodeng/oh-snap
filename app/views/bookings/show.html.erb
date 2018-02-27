@@ -1,7 +1,9 @@
 <div class="container text-center">
   <h1>You've Snapped!</h1>
-  <h2>Great news, you've snapped up a booking with <%= @booking.photographer.user.first_name %></h2>
-  <h3>Order total: £<%= @booking.photographer.hourly_rate * @booking.hours %></h3>
-  <h3>Location: <%= @booking.location %></h3>
+  <div>
+    <h2>Great news, you've snapped up a booking with <%= @booking.photographer.user.first_name %></h2>
+    <h3>Order total: £<%= @booking.photographer.hourly_rate * @booking.hours %></h3>
+    <h3>Location: <%= @booking.location %></h3>
+  </div>
   <%= link_to "Make another booking", photographers_path, class: "btn btn-primary" %>
 </div>
