@@ -1,4 +1,6 @@
 <div class="container">
   <h1>Let's Click</h1>
   <h3>Photographer's Profile</h3>
+  <h3><%= @photographer.user.first_name %></h3>
+  <%= cl_image_tag @photographer.photo, height: 300, width: 400, crop: :fill %>
 </div>
