@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180227121034) do
+ActiveRecord::Schema.define(version: 20180227161136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,8 +35,16 @@ ActiveRecord::Schema.define(version: 20180227121034) do
     t.integer "hourly_rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "photo"
+    t.string "avatar"
     t.index ["user_id"], name: "index_photographers_on_user_id"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.bigint "photographer_id"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["photographer_id"], name: "index_photos_on_photographer_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -62,4 +70,5 @@ ActiveRecord::Schema.define(version: 20180227121034) do
   add_foreign_key "bookings", "photographers"
   add_foreign_key "bookings", "users"
   add_foreign_key "photographers", "users"
+  add_foreign_key "photos", "photographers"
 end

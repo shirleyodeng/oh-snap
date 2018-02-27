@@ -1,0 +1,29 @@
+<div class="container">
+  <ul>
+    <h2>My bookings:</h2>
+    <% @bookings.each do |booking| %>
+      <li>
+        <%= booking.date %>
+        <%= booking.hours %>
+        <%= booking.location %>
+        Photographer: <%= booking.photographer.user.first_name %>
+        <%= link_to "Delete Booking", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete %>
+      </li>
+    <% end %>
+  </ul>
+
+  <ul>
+    <h2>My jobs:</h2>
+    <% @bookings.each do |booking| %>
+      <% if booking.photographer.user == current_user %>
+        <li>
+          <%= booking.date %>
+          <%= booking.hours %>
+          <%= booking.location %>
+          Booker: <%= booking.user.first_name %>
+          <%= link_to "Delete Job", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>

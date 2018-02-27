@@ -1,6 +1,17 @@
 <div class="container">
   <h1>Let's Click</h1>
   <h3>Photographer's Profile</h3>
+  Avatar: <%= cl_image_tag @photographer.avatar, height: 60, width: 60, crop: :thumb, gravity: :face %>
   <h3><%= @photographer.user.first_name %></h3>
-  <%= cl_image_tag @photographer.photo, height: 300, width: 400, crop: :fill %>
+  <% @photographer.photos.each do |photo| %>
+    <%= cl_image_tag photo.photo, height: 300, width: 400, crop: :fill %>
+  <% end %>
+
+  <h3>Book me</h3>
+    <%= simple_form_for [@photographer, @booking] do |f| %>
+    <%= f.input :date %>
+    <%= f.input :hours %>
+    <%= f.input :location %>
+    <%= f.submit %>
+  <% end %>
 </div>

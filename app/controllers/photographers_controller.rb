@@ -1,4 +1,5 @@
 class PhotographersController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_photographer, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -6,11 +7,12 @@ class PhotographersController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
   end
 
   def new
     @photographer = Photographer.new
-    @photographer_photos = @photographer.photos.build
+    @photos = @photographer.photos.build
     authorize @photographer
   end
 
@@ -20,19 +22,18 @@ class PhotographersController < ApplicationController
     authorize @photographer
     respond_to do |format|
     if @photographer.save
-      params[:photographer_photos]['avatar'].each do |a|
-        @photographer_photos = @photographer.photographer_photos.create!(:avatar => a, :photographer_id => @photographer.id)
+      params[:photos]['photo'].each do |a|
+        @photos = @photographer.photos.create!(:photo => a, :photographer_id => @photographer.id)
       end
-      format.html { redirect_to @photographer, notice: 'Post was successfully created.' }
+      format.html { redirect_to @photographer, notice: 'Photo was successfully created.' }
     else
       format.html { render action: 'new' }
       end
     end
-    # @photographer.save
-    # redirect_to photographer_path(@photographer)
   end
 
   def edit
+    @photo = Photo.new(photographer_id: @photographer.id)
   end
 
   def update
@@ -42,7 +43,7 @@ class PhotographersController < ApplicationController
 
   def destroy
     @photographer.destroy
-    # redirect_to user dashboard
+    redirect_to bookings_path
   end
 
   private
@@ -53,6 +54,6 @@ class PhotographersController < ApplicationController
   end
 
   def photographer_params
-    params.require(:photographer).permit(:description, :categories, :city, :hourly_rate, :photo, :photo_cache)
+    params.require(:photographer).permit(:description, :categories, :city, :hourly_rate, :avatar, :avatar_cache)
   end
 end

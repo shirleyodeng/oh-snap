@@ -1,11 +1,11 @@
   <%= simple_form_for(@photographer) do |f| %>
+    <%= f.input :avatar %>
+    <%= f.input :avatar_cache, as: :hidden %>
     <%= f.input :description %>
     <%= f.input :city %>
     <%= f.input :hourly_rate %>
-    <%#= f.input :photo %>
-    <%#= f.input :photo_cache, as: :hidden %>
-    <%= f.fields_for :photographer_photos do |p| %>
-      <%= f.file_field :avatar, multiple: true, name: "photographer_photos[avatar][]" %>
+    <%= f.fields_for :photos do |p| %>
+      <%= f.file_field :photo, multiple: true, name: "photos[photo][]" %>
     <% end %>
     <%= f.submit %>
   <% end %>
