@@ -4,7 +4,7 @@
       <% @bookings.each do |booking| %>
       <div class="card">
         <img src= <%= cl_image_path booking.photographer.avatar %> class="avatar"/>
-        <li>Photographe: <%= booking.photographer.user.first_name %></li>
+        <li>Photographer: <%= booking.photographer.user.first_name %></li>
         <li>Date: <%= booking.date %></li>
         <li>Number of hours: <%= booking.hours %></li>
         <li>Booking location: <%= booking.location %></li>
