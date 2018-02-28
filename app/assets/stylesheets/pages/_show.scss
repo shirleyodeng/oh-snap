@@ -82,8 +82,19 @@
   }
 }
 
-
-
+.btn-orange {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: $peach;
+  opacity: 1;
+  &:hover {
+    opacity: 0.8;
+    background: $orange;
+    text-decoration: none;
+    color: white;
+  }
+}
 
 
 
