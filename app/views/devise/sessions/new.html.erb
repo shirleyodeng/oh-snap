@@ -4,7 +4,7 @@
     <div>
     <div class="container white">
       <div class="row">
-        <h2 class="spacing orange-font">LOG IN</h2>
+        <h2 class="spacing blue-font text-center">LOG IN</h2>
 
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">
@@ -14,7 +14,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Log in" %>
+          <%= f.button :submit, "Log in", class: "btn-another-booking" %>
         </div>
         <% end %>
 

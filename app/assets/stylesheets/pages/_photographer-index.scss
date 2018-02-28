@@ -1,29 +1,36 @@
 .contain {
-  width: 100vw;
-  height: 100vh;
-  margin: 50px 0px;
   color: #56CBF9;
+  background-color: white;
+  margin-top: 0px;
+  padding: 20px;
+  h1 {
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 40px;
+  margin-top: 0px;
+  padding: 20px;
+  }
 }
 
-h1 {
-  padding-top: 20px;
+.search {
   text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 form {
+  input {
+  font-family: "Roboto", san-serif;
+  }
   text-align: center;
 }
 
-.cards {
-  display: flex;
+.cards-container {
   align-items: center;
   color: black;
 }
 
-.card {
-  position: relative;
-  padding: 15px;
-  flex: 1 1 auto;
+.polaroid {
   margin: 40px;
   border-radius: 1px;
   height: 320px;
@@ -40,30 +47,23 @@ form {
   color: black;
   position: relative;
   text-align: center;
+  border-top: 10px solid white;
+  margin: 10px;
 }
 
 .card-description h2 {
-    color: black;
-    text-transform: uppercase;
-    font-size: 25px;
-}
-
-.avatar {
-  border-radius: 50%;
-}
-
-.card-user {
-  // position: absolute;
-  // top: 10px;
-  // left: 90px;
+  color: black;
+  text-transform: uppercase;
+  font-size: 25px;
 }
 
 .card-link {
-  position: absolute;
   top: 0;
+  color: black;
   bottom: 0;
   width: 100%;
   z-index: 2;
-  background: black;
-  opacity: 0;
+  background: white;
+  opacity: 100;
+  font-size: 20px;
 }
