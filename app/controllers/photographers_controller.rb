@@ -59,6 +59,6 @@ class PhotographersController < ApplicationController
   end
 
   def photographer_params
-    params.permit(:description, :categories, :city, :hourly_rate, :avatar, :avatar_cache, :search)
+    params.require(:photographer).permit(:description, :categories, :city, :hourly_rate, :avatar, :avatar_cache, :search)
   end
 end

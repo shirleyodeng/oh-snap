@@ -6,7 +6,7 @@
     <% end %>
   <!-- cards of photographers -->
   <% if @photographers.blank? %>
-    <h4>There are no photographers located in <%= params[:search] %>.</h4>
+    <h3>There are no photographers located in <%= params[:search] %>.</h3>
   <% else  %>
     <% @photographers.each do |photographer| %>
       <%= link_to photographer.user.first_name, photographer_path(photographer) %>
