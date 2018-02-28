@@ -1,11 +1,26 @@
   <%= simple_form_for(@photographer) do |f| %>
-    <%= f.input :avatar %>
+  <label class="btn">
+    + profile photo
+    <span style="display:none;">
+    <%= f.input :avatar, label: false %>
     <%= f.input :avatar_cache, as: :hidden %>
-    <%= f.input :description %>
-    <%= f.input :city %>
-    <%= f.input :hourly_rate %>
+    </span>
+  </label>
+    <%= f.input :description, label: false, placeholder: 'describe your experience' %>
+    <%= f.input :city, label: false, placeholder: 'your city' %>
+    <%= f.input :hourly_rate, label: false, placeholder: 'hourly rate' %>
+    <label class="btn">
+      + up to 5 portfolio images
+      <span style="display:none;">
     <%= f.fields_for :photos do |p| %>
       <%= f.file_field :photo, multiple: true, name: "photos[photo][]" %>
+    </span>
+    </label>
     <% end %>
+    <label class="btn btn-danger">
+      submit!
+      <span style="display:none;">
     <%= f.submit %>
+  </span>
+  </label>
   <% end %>
