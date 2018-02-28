@@ -18,7 +18,7 @@
       <% @bookings.each do |booking| %>
         <% if booking.photographer.user == current_user %>
           <div class="card">
-              <img src = http://res.cloudinary.com/dj2d1zdlv/image/upload/v1519827555/avatar.png class="avatar">
+              <img src = http://res.cloudinary.com/devfclqwl/image/upload/v1519837147/avatar.png class="avatar">
               <li>Booker: <%= booking.user.first_name %></li>
               <li>Date: <%= booking.date %></li>
               <li>Number of hours: <%= booking.hours %></li>
