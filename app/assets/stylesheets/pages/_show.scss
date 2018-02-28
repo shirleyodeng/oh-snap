@@ -1,0 +1,93 @@
+.photographer-prof {
+  font-family: "Roboto";
+  background-color: white;
+}
+
+.photographer-prof-title h1 {
+  letter-spacing: 5px;
+  text-align: center;
+  color: $peach;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 30px;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.photographer-name {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.photographer-info-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 10px;
+}
+
+.photographer-information {
+  margin-right: 50px;
+  h3 {
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center
+  }
+  p {
+    width: 300px;
+    text-align: center;
+  }
+}
+
+.photographer-avatar {
+  padding: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px 50px;
+  }
+}
+
+.photographer-photos {
+  text-align: center;
+  background-color: $peach;
+  padding: 20px;
+  font-weight: 500;
+  img {
+    padding: 20px;
+  }
+  h3 {
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+}
+
+.booking-form {
+  padding: 20px;
+  width: 500px;
+  letter-spacing: 2px;
+  h3 {
+  margin-top: 0px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 2px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
