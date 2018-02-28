@@ -1,5 +1,4 @@
 <div class="photographer-prof">
-
   <div class="photographer-prof-title">
     <h1>LET'S CLICK</h1>
   </div>
@@ -10,7 +9,7 @@
     <% end %>
   </div>
 
-  <div class="photographer-info-container">
+  <div class="photographer-info-container text-center">
     <div class="photographer-bio">
       <div class="photographer-name">
         <h3><%= @photographer.user.first_name.upcase%> <%=@photographer.user.last_name.upcase%></h3>
@@ -20,7 +19,7 @@
         <%= cl_image_tag @photographer.avatar, height: 100, width: 100, crop: :thumb, gravity: :face %>
       </div>
 
-      <div class="photographer-information text-center">
+      <div class="photographer-information">
         <p><%=@photographer.description%></p>
         <p><strong>Location:</strong> <%=@photographer.city%></p>
         <p><strong>Hourly rate:</strong> £<%=@photographer.hourly_rate%></p>
