@@ -12,13 +12,10 @@
   transition: 0.5s background-color ease;*/
 }
 
-.navbar-wagon-white {
-  background-color: white;
-}
-
-/* Logo */
-.navbar-wagon-brand img {
-  height: 50px;
+#navbar-logo {
+  color: $blue;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /* User Avatar */
@@ -44,12 +41,11 @@
 /* Navbar link */
 .navbar-wagon a {
   color: black;
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
+  font-size: 14px;
   letter-spacing: 2px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: $blue;
   text-decoration: none;
 }
 
