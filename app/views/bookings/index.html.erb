@@ -1,29 +1,37 @@
-<div class="container">
-  <ul>
-    <h2>My bookings:</h2>
-    <% @bookings.each do |booking| %>
-      <li>
-        <%= booking.date %>
-        <%= booking.hours %>
-        <%= booking.location %>
-        Photographer: <%= booking.photographer.user.first_name %>
-        <%= link_to "Delete Booking", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete %>
-      </li>
-    <% end %>
-  </ul>
+  <div class="dashboard">
 
-  <ul>
-    <h2>My jobs:</h2>
-    <% @bookings.each do |booking| %>
-      <% if booking.photographer.user == current_user %>
-        <li>
-          <%= booking.date %>
-          <%= booking.hours %>
-          <%= booking.location %>
-          Booker: <%= booking.user.first_name %>
-          <%= link_to "Delete Job", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete %>
-        </li>
+
+    <div class="bookings-container">
+      <h2 class="spacing">BOOKINGS:</h2>
+      <% @bookings.each do |booking| %>
+      <div class="card">
+        <img src= <%= cl_image_path booking.photographer.avatar %> class="avatar"/>
+        <li>Photographe: <%= booking.photographer.user.first_name %></li>
+        <li>Date: <%= booking.date %></li>
+        <li>Number of hours: <%= booking.hours %></li>
+        <li>Booking location: <%= booking.location %></li>
+        <%= link_to "x", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete, class: 'btn' %>
+      </div>
       <% end %>
-    <% end %>
-  </ul>
-</div>
+    </div>
+
+    <div class="jobs-container">
+      <h2 class="spacing blue">JOBS:</h2>
+      <% @bookings.each do |booking| %>
+        <% if booking.photographer.user == current_user %>
+          <div class="card">
+              <img src = http://res.cloudinary.com/dj2d1zdlv/image/upload/v1519827555/avatar.png class="avatar">
+              <li>Booker: <%= booking.user.first_name %></li>
+              <li>Date: <%= booking.date %></li>
+              <li>Number of hours: <%= booking.hours %></li>
+              <li>Booking location: <%= booking.location %></li>
+              <%= link_to "x", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete, class: 'btn' %>
+            </div>
+          <% end %>
+        <% end %>
+    </div>
+  </div>
+
+
+
+

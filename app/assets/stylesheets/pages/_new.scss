@@ -1,6 +1,10 @@
 h2 {
 font-family: 'Roboto', sans-serif;
-color: white;
+color: #FFB872;
+}
+
+.orange-font {
+  color: #FFB872;
 }
 
 .spacing {
@@ -10,7 +14,7 @@ color: white;
 .container {
   display: flex;
   justify-content: center;
-  margin: auto;
+//   margin: auto;
 }
 
 .btn {
@@ -33,13 +37,19 @@ color: white;
 //   box-shadow: 2px 0 2px -2px rgba(0,0,0,0.2);
 // }
 
-.background {
-  background-color: #FFB872;
-  height:100vh;
-}
+// .background {
+//   background-color: #FFB872;
+//   height:100vh;
+// }
 
 .photo-upload {
   opacity: 0px;
 }
+
+.white {
+  background-color: white;
+  height: 100vh;
+}
+
 
 
