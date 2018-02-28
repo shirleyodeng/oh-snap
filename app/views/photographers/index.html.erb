@@ -1,7 +1,15 @@
 <div class="container">
   <h1>Take Your Pic</h1>
+    <%= simple_form_for(photographers_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Filter by City" %>
+        <%= submit_tag "Search", :name => nil %>
+    <% end %>
   <!-- cards of photographers -->
-  <% @photographers.each do |photographer| %>
-    <%= link_to photographer.user.first_name, photographer_path(photographer) %>
+  <% if @photographers.blank? %>
+    <h3>There are no photographers located in <%= params[:search] %>.</h3>
+  <% else  %>
+    <% @photographers.each do |photographer| %>
+      <%= link_to photographer.user.first_name, photographer_path(photographer) %>
+    <% end %>
   <% end %>
 </div>

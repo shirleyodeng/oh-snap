@@ -4,6 +4,11 @@ class PhotographersController < ApplicationController
 
   def index
     @photographers = policy_scope(Photographer)
+    if params[:search]
+      @photographers = Photographer.search(params[:search]).order("created_at DESC")
+    else
+      @photographers = Photographer.all.order("created_at DESC")
+    end
   end
 
   def show
@@ -54,6 +59,6 @@ class PhotographersController < ApplicationController
   end
 
   def photographer_params
-    params.require(:photographer).permit(:description, :categories, :city, :hourly_rate, :avatar, :avatar_cache)
+    params.require(:photographer).permit(:description, :categories, :city, :hourly_rate, :avatar, :avatar_cache, :search)
   end
 end
