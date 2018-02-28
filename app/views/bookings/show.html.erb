@@ -1,9 +1,17 @@
-<div class="container text-center">
-  <h1>You've Snapped!</h1>
-  <div>
-    <h2>Great news, you've snapped up a booking with <%= @booking.photographer.user.first_name %></h2>
-    <h3>Order total: £<%= @booking.photographer.hourly_rate * @booking.hours %></h3>
-    <h3>Location: <%= @booking.location %></h3>
+<div class="confirmation-page-container">
+  <div class="text-center">
+    <h1 id="confirmation-header">You've Snapped Up A Good One!</h1>
+    <div class="confirmation-container">
+      <h3>Great news, you have a booking with <%= @booking.photographer.user.first_name.capitalize %>.</h2>
+      <%= cl_image_tag @booking.photographer.avatar, height: 100, width: 100, crop: :thumb, class: "photographer-avatar" %>
+      <div class="order-details">
+        <h4>Date: <%= @booking.date %></h4>
+        <h4>Location: <%= @booking.location %></h4>
+        <h4>Booking total: £<%= @booking.photographer.hourly_rate * @booking.hours %></h4>
+      </div>
+    </div>
+    <div class="confirmation-btn">
+      <%= link_to "Make another booking", photographers_path, class: "btn-another-booking" %>
+    </div>
   </div>
-  <%= link_to "Make another booking", photographers_path, class: "btn btn-primary" %>
 </div>

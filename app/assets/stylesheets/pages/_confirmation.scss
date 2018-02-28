@@ -1,0 +1,54 @@
+.confirmation-page-container {
+  margin-top: 0;
+  background-color: white;
+  height: calc(100vh - 50px);
+}
+
+#confirmation-header {
+  margin-top: 0;
+  padding-top: 80px;
+  font-size: 40px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: $blue;
+  font-weight: 700;
+}
+
+.confirmation-container {
+  letter-spacing: 1px;
+  h3 {
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: normal;
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+
+.order-details {
+  padding-top: 20px;
+}
+
+.photographer-avatar {
+  border-radius: 50%;
+}
+
+.btn-another-booking {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: $blue;
+  opacity: 1;
+  &:hover {
+    opacity: 0.8;
+    background: $blue;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.confirmation-btn {
+  margin-top: 50px;
+}
