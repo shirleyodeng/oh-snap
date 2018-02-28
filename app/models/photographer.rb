@@ -6,4 +6,8 @@ class Photographer < ApplicationRecord
   validates :city, presence: true
   validates :hourly_rate, presence: true
   mount_uploader :avatar, PhotoUploader
+
+  def self.search(search)
+    where("city LIKE ?", "%#{search}%")
+  end
 end
