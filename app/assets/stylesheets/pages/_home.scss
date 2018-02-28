@@ -6,23 +6,22 @@
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  /*font-family: "Roboto", sans-serif;*/
+  margin-bottom: 0px;
 }
 
 .banner-text {
   h2 {
   color: $white;
-  /*font-family: "Roboto", sans-serif;*/
   font-weight: 700;
   text-align: center;
   letter-spacing: 5px;
   margin-top: 0px;
-  font-size: 40px;
+  font-size: 64px;
   }
   a {
   color: $white;
   letter-spacing: 5px;
-  font-size: 40px;
+  font-size: 64px;
   font-weight: 700;
   }
 }
