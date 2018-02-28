@@ -1,7 +1,7 @@
 .banner {
   background-image: url('front-page.jpg');
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 50px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,4 +24,8 @@
   font-size: 64px;
   font-weight: 700;
   }
+}
+
+body {
+  background-color: white;
 }

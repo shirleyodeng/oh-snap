@@ -1,8 +1,6 @@
   <div class="dashboard">
-
-
     <div class="bookings-container">
-      <h2 class="spacing">BOOKINGS:</h2>
+      <h2 class="spacing text-center">BOOKINGS</h2>
       <% @bookings.each do |booking| %>
       <div class="card">
         <img src= <%= cl_image_path booking.photographer.avatar %> class="avatar"/>
@@ -16,7 +14,7 @@
     </div>
 
     <div class="jobs-container">
-      <h2 class="spacing blue">JOBS:</h2>
+      <h2 class="spacing blue text-center">JOBS</h2>
       <% @bookings.each do |booking| %>
         <% if booking.photographer.user == current_user %>
           <div class="card">
@@ -27,8 +25,10 @@
               <li>Booking location: <%= booking.location %></li>
               <%= link_to "x", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete, class: 'btn' %>
             </div>
-          <% end %>
+        <% else %>
+          <h3>You have no jobs.</h3>
         <% end %>
+      <% end %>
     </div>
   </div>
 

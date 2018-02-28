@@ -9,7 +9,7 @@
   border-bottom-width: 30px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   border-color: rgb(244, 244, 244);
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 50px;
 }
 
@@ -20,18 +20,17 @@ left: 50%;
 }
 
 .jobs-container {
-
+  padding: 20px;
 }
 
 .bookings-container {
-
+  padding: 20px;
 }
 
 .dashboard {
   background-color: white;
-  height: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .blue {

@@ -1,7 +1,7 @@
 <div class="container white">
   <div class="row">
 <!--     <div class="col-xs-6 col-xs-offset-3"> -->
-      <h2 class= "spacing orange-font">SIGN UP</h2>
+      <h2 class= "spacing blue-font">SIGN UP</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
@@ -15,7 +15,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Sign up" %>
+          <%= f.button :submit, "Sign up", class: "btn-another-booking" %>
         </div>
       <% end %>
 
