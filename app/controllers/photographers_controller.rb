@@ -28,19 +28,25 @@ class PhotographersController < ApplicationController
     @photographer.user = current_user
     authorize @photographer
     respond_to do |format|
-    if @photographer.save
-      params[:photos]['photo'].each do |a|
+      if @photographer.save
+        params[:photos]['photo'].each do |a|
         @photos = @photographer.photos.create!(:photo => a, :photographer_id => @photographer.id)
       end
-      format.html { redirect_to @photographer, notice: 'Photo was successfully created.' }
-    else
-      format.html { render action: 'new' }
+        format.html { redirect_to @photographer, notice: 'Photo was successfully created.' }
+      else
+        format.html { render action: 'new' }
       end
     end
   end
 
   def update
-    @photo = Photo.new(photographer_id: @photographer.id)
+    if params[:photos]
+      @photographer.photos.destroy_all
+      params[:photos]['photo'].each do |a|
+        @photos = @photographer.photos.create!(:photo => a, :photographer_id => @photographer.id)
+        @photographer.save
+      end
+    end
     @photographer.update(photographer_params)
     redirect_to photographer_path(@photographer)
   end

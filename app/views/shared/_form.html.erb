@@ -1,21 +1,26 @@
   <%= simple_form_for(@photographer) do |f| %>
-  <label class="btn-another-booking">
-    + profile photo
-    <span style="display:none;">
-    <%= f.input :avatar, label: false %>
-    <%= f.input :avatar_cache, as: :hidden %>
-    </span>
-  </label>
-    <%= f.input :description, label: false, placeholder: 'describe your experience' %>
-    <%= f.input :city, label: false, placeholder: 'your city' %>
-    <%= f.input :hourly_rate, label: false, placeholder: 'hourly rate' %>
     <label class="btn-another-booking">
-      + up to 5 portfolio images
+      + Profile Photo
       <span style="display:none;">
-    <%= f.fields_for :photos do |p| %>
-      <%= f.file_field :photo, multiple: true, name: "photos[photo][]" %>
-    </span>
+      <%= f.input :avatar %>
+      <%= f.input :avatar_cache, as: :hidden %>
+      </span>
     </label>
-    <% end %>
-    <%= f.submit class: "btn-another-booking" %>
+    <%= f.input :description, label: false, placeholder: 'Describe your experience' %>
+    <%= f.input :city, label: false, placeholder: 'Our city' %>
+    <%= f.input :hourly_rate, label: false, placeholder: 'Hourly rate' %>
+    <label class="btn-another-booking">
+      + Up to 5 Portfolio Images
+      <span style="display:none;">
+        <%= f.fields_for :photos do |p| %>
+          <%= f.file_field :photo, multiple: true, name: "photos[photo][]" %>
+        <% end %>
+      </span>
+    </label>
+    <label class="btn-another-booking">
+      Submit
+      <span style="display:none;">
+      <%= f.submit %>
+      </span>
+    </label>
   <% end %>
