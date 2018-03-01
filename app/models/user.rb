@@ -5,6 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :bookings
+  has_many :photographers, through: :bookings
   validates :first_name, presence: true
   validates :last_name, presence: true
+
+  def is_photographer?
+    self.photographers.blank?
+  end
 end

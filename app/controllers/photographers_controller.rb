@@ -16,6 +16,8 @@ class PhotographersController < ApplicationController
   end
 
   def new
+    redirect_to bookings_path if current_user.is_photographer?
+    @user = current_user
     @photographer = Photographer.new
     @photos = @photographer.photos.build
     authorize @photographer
