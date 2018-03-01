@@ -40,7 +40,6 @@ class PhotographersController < ApplicationController
   end
 
   def update
-    # @photo = Photo.new(photographer_id: @photographer.id)
     if params[:photos]
       @photographer.photos.destroy_all
       params[:photos]['photo'].each do |a|
