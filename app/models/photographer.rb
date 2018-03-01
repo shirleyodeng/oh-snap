@@ -6,6 +6,7 @@ class Photographer < ApplicationRecord
   validates :description, presence: true
   validates :city, presence: true
   validates :hourly_rate, presence: true
+  # validates :photos, presence: true
 
   def self.search(search)
     where("city LIKE ?", "%#{search}%")
