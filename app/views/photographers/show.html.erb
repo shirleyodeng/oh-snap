@@ -14,12 +14,14 @@
       <div class="photographer-name">
         <h3>
           <%= @photographer.user.first_name.upcase%> <%=@photographer.user.last_name.upcase%>
-          <% if @photographer.user == current_user %>
-            <a href data-toggle="modal" data-target="#myModal" id="edit"><i class="fas fa-pencil-alt"></i></a>
-            <%= link_to photographer_path, method: :delete do %>
-              <i class="fas fa-trash"></i>
+          <span class="photographer-edit">
+            <% if @photographer.user == current_user %>
+              <a href data-toggle="modal" data-target="#myModal" id="edit"><i class="fas fa-pencil-alt"></i></a>
+              <%= link_to photographer_path, method: :delete do %>
+                <i class="fas fa-trash"></i>
+              <% end %>
             <% end %>
-          <% end %>
+          </span>
         </h3>
       </div>
 
@@ -29,15 +31,16 @@
 
       <div class="photographer-information">
         <p><%=@photographer.description%></p>
-        <p><strong>Location:</strong> <%=@photographer.city%></p>
-        <p><strong>Hourly rate:</strong> £<%=@photographer.hourly_rate%></p>
+        <p><strong>Location: </strong><%= @photographer.city %></p>
+        <p><strong>Hourly rate: </strong>£<%= @photographer.hourly_rate %></p>
+        <p><strong>Specialise in: </strong><%= @photographer.category %></p>
       </div>
     </div>
 
-    <div class= "booking-form">
+    <div class="booking-form">
       <h3>BOOK ME</h3>
-        <%= simple_form_for [@photographer, @booking] do |f| %>
-        <%= f.input :date %>
+      <%= simple_form_for [@photographer, @booking] do |f| %>
+        <%= f.input :date, order: [:day, :month, :year] %>
         <%= f.input :hours %>
         <%= f.input :location %>
         <%= f.submit class: "btn-orange" %>
@@ -47,16 +50,16 @@
 </div>
 
 <div class="modal fade" id="myModal" role="dialog">
-  <div class="modal-dialog modal-sm">
-
-    <!-- Modal content-->
+  <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-header text-center">
         <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
-        <h1 class="form-title">Edit your profile</h1>
+        <h2 class="form-title spacing blue-font text-center">EDIT YOUR PROFILE</h2>
       </div>
       <div class="modal-body text-center">
-        <%= render 'shared/form' %>
+        <div class="">
+          <%= render 'shared/form' %>
+        </div>
       </div>
     </div>
   </div>

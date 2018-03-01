@@ -36,11 +36,13 @@
 }
 
 .btn-another-booking {
+  font-weight: normal;
   color: white;
   padding: 10px 15px;
   border-radius: 4px;
   background-color: $blue;
   opacity: 1;
+  margin-bottom: 10px;
   &:hover {
     opacity: 0.8;
     background: $blue;
