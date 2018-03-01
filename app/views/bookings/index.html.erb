@@ -6,7 +6,7 @@
  <% @bookings.each do |booking| %>
  <% if booking.user == current_user %>
  <li class="message">
-  <img src= <%= cl_image_path booking.photographer.avatar %> class="avatar"/>
+  <img src= <%= cl_image_path booking.photographer.avatar %> class="avatar-dashboard"/>
   <div class="message-name">
     <h4> <%= booking.photographer.user.first_name %></h4>
     <p class="light-text"><%= booking.photographer.user.email %></p>
@@ -61,8 +61,13 @@
       <% end %>
       <% if count == 0 %>
       <div>
-        <p class="no-booking">You have no bookings... <%= link_to "update ", photographer_path(current_user) %>your photographer profile and start earning today!</p>
-     </div>
+        <p class="no-booking">You have no bookings...
+          <% if current_user.is_photographer? %>
+            <%= link_to "update ", photographer_path(current_user.photographer_id) %>your photographer profile and start earning today!</p>
+          <% else %>
+            <%= link_to "become ", new_photographer_path %>a photographer  and start earning today!</p>
+          <% end %>
+      </div>
      <% end %>
    </div>
  </li>
