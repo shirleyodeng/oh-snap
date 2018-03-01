@@ -4,3 +4,65 @@
     <h2><strong>A PHOTOGRAPHER</strong></h2>
   </div>
 </div>
+
+<div class="box-orange">
+</div>
+
+<div class="home-box">
+  <h1>HOW IT WORKS</h1>
+  <div class="how-box">
+    <div class="how-text">
+      <h3>Tell us when, where and why. We take care of the rest.</h3>
+      <p>The more we know, the better we can help out. In addition to the basic logistics like location and time, let us know the style and feel you're looking for.</p>
+    </div>
+    <div class="how-image">
+      <%= cl_image_tag("screen_shot", width:600, height: 400) %>
+    </div>
+  </div>
+</div>
+
+<div class="box-blue">
+</div>
+
+<div class="people">
+  <h1>MEET THE TEAM</h1>
+  <div class="people-box">
+    <div class="people-card">
+      <div class="photographer-avatar">
+        <%= cl_image_tag("kat", width: 100, height: 100, crop: :thumb, gravity: :face) %>
+      </div>
+      <div class="people-info">
+        <h3>Kat</h3>
+        <p>CEO // Cat Enthusiast</p>
+      </div>
+    </div>
+    <div class="people-card">
+      <div class="photographer-avatar">
+        <%= cl_image_tag("shirley", width: 100, height: 100, crop: :thumb, gravity: :face) %>
+      </div>
+      <div class="people-info">
+        <h3>Shirley</h3>
+        <p>Senior Developer // Chocaholic </p>
+      </div>
+    </div>
+    <div class="people-card">
+      <div class="photographer-avatar">
+        <%= cl_image_tag("amina", width: 100, height: 100, crop: :thumb, gravity: :face) %>
+      </div>
+      <div class="people-info">
+        <h3>Amina</h3>
+      </div>
+    </div>
+    <div class="people-card">
+      <div class="photographer-avatar">
+        <%= cl_image_tag("alisa", width: 100, height: 100, crop: :thumb, gravity: :face) %>
+      </div>
+      <div class="people-info">
+        <h3>Alisa</h3>
+        <p>Head of Design // Potato Lover</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
