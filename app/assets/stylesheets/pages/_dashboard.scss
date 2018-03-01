@@ -1,0 +1,64 @@
+.welcome-banner {
+  margin: 50px 200px;
+}
+
+.inbox {
+  margin:50px 200px;
+  list-style: none;
+  border: 1px solid #D8D8D6;
+  padding-left: 0px;
+}
+.message {
+  background: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #D8D8D6;
+  margin-left: 0px;
+//   border: 1px solid #D8D8D6;
+}
+
+.message-body {
+  flex-grow: 1;
+  padding-left: 30px;
+}
+
+.message-name {
+  font-size: 12px;
+  margin-bottom: 0px;
+  padding-left: 10px;
+  /*font-weight: bold;*/
+  min-width: 100px;
+  margin: 0px;
+  text-align: center;
+}
+
+.message-name p {
+  font-size: 13px;
+  margin-bottom: 0px;
+  padding-left: 20px;
+  font-weight: lighter;
+}
+
+.message-body p {
+  font-size: 13px;
+  padding-left: 20px;
+}
+
+.light-text {
+  color: rgba(0,0,0,0.4);
+}
+
+.border {
+  border:1px;
+  padding:0 20px;
+  margin:0;
+}
+
+.no-booking {
+  font-size: 12px;
+  padding-left: 30px;
+  /*font-weight: bold;*/
+  min-width: 100px;
+  margin: 20px;
+}
