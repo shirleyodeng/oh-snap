@@ -1,7 +1,7 @@
 .banner {
   background-image: url('http://res.cloudinary.com/devfclqwl/image/upload/v1519836974/front-page.jpg');
   background-size: cover;
-  height: calc(100vh - 50px);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,4 +28,77 @@
 
 body {
   background-color: white;
+}
+
+.home-box {
+  padding: 40px;
+  h1 {
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 0px;
+  }
+}
+
+.how-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-text {
+  width: 400px;
+  padding: 30px;
+  h3 {
+    margin-top: 0px;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  p {
+    letter-spacing: 0.5px;
+  }
+}
+
+.box-orange {
+  padding: 10px;
+  background-color: $peach;
+}
+
+.box-blue {
+  padding: 10px;
+  background-color: $blue;
+}
+
+.people-box {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.people {
+  padding: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+  h1 {
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 0px;
+  }
+}
+
+.people-card {
+  text-align: center;
+  margin-top: 0px;
+  h3 {
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  }
 }

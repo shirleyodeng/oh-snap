@@ -1,6 +1,6 @@
 .contain {
   color: #56CBF9;
-  background-color: white;
+  height: 20px;
   margin-top: 0px;
   padding: 20px;
   h1 {
@@ -12,10 +12,17 @@
   }
 }
 
+.bar {
+  background-color: $blue;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
 .search {
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
+  letter-spacing: 2px;
 }
 
 form {
@@ -23,6 +30,7 @@ form {
   font-family: "Roboto", san-serif;
   }
   text-align: center;
+  letter-spacing: 2px;
 }
 
 .cards-container {
@@ -37,18 +45,19 @@ form {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
   padding-bottom: 20px;
-  background-color: white;
+  background-image: cover;
 }
 
-.card-body {
+.polaroid-body {
   padding: 10px;
-  background-color: #E5E1E1 !important;
   height: 250px;
   color: black;
   position: relative;
   text-align: center;
-  border-top: 10px solid white;
   margin: 10px;
+  border-top: 10px solid white;
+  letter-spacing: 2px;
+  background-image: cover;
 }
 
 .card-description h2 {
