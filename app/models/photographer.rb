@@ -1,7 +1,7 @@
 class Photographer < ApplicationRecord
   belongs_to :user
   has_many :bookings
-  has_many :photos
+  has_many :photos, dependent: :destroy
   mount_uploader :avatar, PhotoUploader
   validates :description, presence: true
   validates :city, presence: true

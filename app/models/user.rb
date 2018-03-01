@@ -10,6 +10,14 @@ class User < ApplicationRecord
   validates :last_name, presence: true
 
   def is_photographer?
-    self.photographers.blank?
+    if Photographer.where(user_id: self.id).any?
+      return true
+    else
+      false
+    end
+  end
+
+  def photographer_id
+    Photographer.where(user_id: self.id).first.id
   end
 end

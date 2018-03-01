@@ -39,12 +39,9 @@ class PhotographersController < ApplicationController
     end
   end
 
-  def edit
-    @photo = Photo.new(photographer_id: @photographer.id)
-  end
-
   def update
-    @photographer = Photographer.update(photographer_params)
+    @photo = Photo.new(photographer_id: @photographer.id)
+    @photographer.update(photographer_params)
     redirect_to photographer_path(@photographer)
   end
 
