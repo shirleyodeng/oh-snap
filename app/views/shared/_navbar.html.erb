@@ -2,6 +2,10 @@
   <!-- Logo -->
   <%= link_to "OH SNAP!", root_path, id: "navbar-logo" %>
 
+  <% if user_signed_in? %>
+    <div id="navbar-hello">Hello <%= link_to current_user.first_name.capitalize, photographer_path(current_user), id: "navbar-hello" %>!</div>
+  <% end %>
+
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <% if user_signed_in? %>

@@ -18,11 +18,15 @@
   font-size: 20px;
 }
 
-/* User Avatar */
-.navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
+#navbar-hello {
+  margin-top: 0px;
+  color: black;
+  font-size: 16px;
+  letter-spacing: 2px;
+  a:hover {
+    color: $blue;
+    text-decoration: none;
+  }
 }
 
 /* Right section */
