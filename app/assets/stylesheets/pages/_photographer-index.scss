@@ -1,15 +1,17 @@
-.contain {
-  color: #56CBF9;
-  height: 20px;
-  margin-top: 0px;
-  padding: 20px;
+.fill-high {
+  min-height: 80vh;
+}
+
+.search {
   h1 {
-  text-align: center;
-  letter-spacing: 5px;
-  font-size: 40px;
-  margin-top: 0px;
-  padding: 20px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 48px;
+    color: $blue;
+    margin-bottom: 20px;
   }
+  margin-top: 20px;
+  padding: 10px;
 }
 
 .bar {
@@ -18,11 +20,13 @@
   margin-bottom: 20px;
 }
 
-.search {
+.search-results-card {
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
   letter-spacing: 2px;
+  background-color: white;
+  width: 360px;
 }
 
 form {
@@ -33,46 +37,9 @@ form {
   letter-spacing: 2px;
 }
 
-.cards-container {
-  align-items: center;
-  color: black;
+.search-gallery {
+  background-size: cover;
+  width: 200px;
+  height: 200px;
 }
 
-.polaroid {
-  margin: 40px;
-  border-radius: 1px;
-  height: 320px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-  padding-bottom: 20px;
-  background-image: cover;
-}
-
-.polaroid-body {
-  padding: 10px;
-  height: 250px;
-  color: black;
-  position: relative;
-  text-align: center;
-  margin: 10px;
-  border-top: 10px solid white;
-  letter-spacing: 2px;
-  background-image: cover;
-}
-
-.card-description h2 {
-  color: black;
-  text-transform: uppercase;
-  font-size: 25px;
-}
-
-.card-link {
-  top: 0;
-  color: black;
-  bottom: 0;
-  width: 100%;
-  z-index: 2;
-  background: white;
-  opacity: 100;
-  font-size: 20px;
-}

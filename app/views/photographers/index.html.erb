@@ -1,41 +1,41 @@
-<div class="contain">
+<div class="search">
   <h1><strong>TAKE YOUR PIC</strong></h1>
-
-  <div class="bar">
-  </div>
-
-  <div class="search">
-    <%= simple_form_for(photographers_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Filter by City" %>
-      <%= submit_tag "Search", :name => nil, class: "btn-another-booking" %>
-    <% end %>
-
-    <% if @photographers.blank? %>
-      <h3>There are no photographers located in <%= params[:search] %>.</h3>
-
-    <% else  %>
-
-      <div class="cards-container">
-        <div class="row text-center">
-          <% @photographers.each do |photographer| %>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="polaroid">
-                <div class="polaroid-body" style="background-image: url('<%= cl_image_path(photographer.photos.exists? ? photographer.photos.first.photo : 'https://cdn.cnn.com/cnnnext/dam/assets/120306151541-flights-cheese-super-169.jpg')%>');">
-                  <%= cl_image_tag photographer.avatar, height: 60, width: 60, crop: :thumb, gravity: :face, class: "card-user photographer-avatar" %>
-                  <div class="card-description">
-                    <h2><%= photographer.user.first_name %> <%= photographer.user.last_name %></h2>
-                    <p><capitalize><%= photographer.city %></capitalize></p>
-                    <p>£<%= photographer.hourly_rate %>/Hour</p>
-                  </div>
-                </div>
-                <%= link_to "+", photographer_path(photographer), class: "card-link" %>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    <% end%>
-  </div>
+  <%= simple_form_for(photographers_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Filter by City" %>
+    <%= submit_tag "Search", :name => nil, class: "btn-another-booking" %>
+  <% end %>
 </div>
+
+<% if @photographers.blank? %>
+  <h3>There are no photographers located in <%= params[:search] %>.</h3>
+
+<% else  %>
+
+  <div class="container fill-high">
+    <div class="row">
+      <% @photographers.each do |photographer| %>
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="search-results-card">
+
+            <%= cl_image_tag (photographer.photos.exists? ? photographer.photos.first.photo : 'https://cdn.cnn.com/cnnnext/dam/assets/120306151541-flights-cheese-super-169.jpg'), height: 200, width: 200, crop: :fill, class: "search-gallery"%>
+
+            <%= cl_image_tag photographer.avatar, height: 60, width: 60, crop: :thumb, gravity: :face, class: "card-user photographer-avatar" %>
+
+            <div class="search-information">
+              <h3><%= photographer.user.first_name %> <%= photographer.user.last_name %></h3>
+              <p><capitalize><%= photographer.city %></capitalize></p>
+              <p>£<%= photographer.hourly_rate %>/Hour</p>
+            </div>
+
+            <%= link_to "+", photographer_path(photographer), class: "card-link" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+
+
 
 
