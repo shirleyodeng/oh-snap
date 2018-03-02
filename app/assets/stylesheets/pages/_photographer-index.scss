@@ -7,6 +7,7 @@
 }
 
 .search {
+  margin-top: 50px;
   h1 {
     text-align: center;
     letter-spacing: 5px;
@@ -14,26 +15,28 @@
     color: $blue;
     margin-bottom: 20px;
   }
-  margin-top: 20px;
-  padding: 10px;
 }
 
 .search-results-card {
   text-align: center;
   letter-spacing: 2px;
   background-color: white;
-  width: 205px;
+  width: 202px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
+  box-shadow: 5px 5px 4px rgb(200, 200, 200);
+/*  border: 2px solid rgb(200, 200, 200);*/
 }
 
 form {
-  input {
-  font-family: "Roboto", san-serif;
-  }
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  padding: 20px;
+}
+
+#search {
+  font-family: "Roboto", san-serif;
 }
 
 .search-gallery {
@@ -46,16 +49,20 @@ form {
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -25px;
 }
 
 .search-information {
   h3 {
     font-style: italic;
     letter-spacing: 2px;
-    margin-top: 0px;
+    margin-top: 5px;
+    font-size: 24px;
+    margin-bottom: 5px;
   }
   p {
     margin-bottom: 5px;
+    font-size: 15px;
   }
 }
 
