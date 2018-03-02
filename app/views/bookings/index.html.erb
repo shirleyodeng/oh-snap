@@ -1,12 +1,10 @@
-
-
 <h2 class="spacing text-center">BOOKINGS</h2>
 <ul class="inbox">
  <% count = 0 %>
  <% @bookings.each do |booking| %>
  <% if booking.user == current_user %>
  <li class="message">
-  <img src= <%= cl_image_path booking.photographer.avatar %> class="avatar-dashboard"/>
+  <%= cl_image_tag booking.photographer.avatar, height: 100, width: 100, crop: :thumb, class: "photographer-avatar" %>
   <div class="message-name">
     <h4> <%= link_to booking.photographer.user.first_name, photographer_path(booking.photographer) %></h4>
     <p class="light-text"><%= booking.photographer.user.email %></p>
