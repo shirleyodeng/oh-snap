@@ -1,7 +1,7 @@
 class Photographer < ApplicationRecord
   include PgSearch
   pg_search_scope :global_search,
-    against: [ :category, :city ],
+    against: [ :description, :category, :city ],
     associated_against: {
       user: [ :first_name, :last_name ]
     },
@@ -16,5 +16,5 @@ class Photographer < ApplicationRecord
   validates :description, presence: true
   validates :city, presence: true
   validates :hourly_rate, presence: true
-  validates :category, presence: true, inclusion: { in: [ "Weddings", "Birthdays", "Graduation", "Event", "Fashion", "Portrait", "New born", "Pets"] }
+  validates :category, presence: true, inclusion: { in: [ "Weddings", "Birthdays", "Graduation", "Fashion", "Portraits", "Maternity", "Pets"] }
 end
