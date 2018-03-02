@@ -27,40 +27,60 @@
 <div class="people" id="people">
   <h1>MEET THE TEAM</h1>
   <div class="people-box">
+
     <div class="people-card">
       <div class="photographer-avatar">
         <%= cl_image_tag("kat", width: 100, height: 100, crop: :thumb, gravity: :face) %>
+        <div class="overlay">
+          <%= cl_image_tag("cat", width: 100, height: 100, crop: :thumb, gravity: :face) %>
+        </div>
       </div>
       <div class="people-info">
         <h3>Kat</h3>
-        <p>CEO // Cat Enthusiast</p>
+        <p>CEO</p>
+        <p>Cat Enthusiast</p>
       </div>
     </div>
+
     <div class="people-card">
       <div class="photographer-avatar">
         <%= cl_image_tag("shirley", width: 100, height: 100, crop: :thumb, gravity: :face) %>
+        <div class="overlay">
+          <%= cl_image_tag("chocolate", width: 100, height: 100, crop: :thumb, gravity: :face) %>
+        </div>
       </div>
       <div class="people-info">
         <h3>Shirley</h3>
-        <p>Senior Developer // Chocaholic </p>
+        <p>Senior Developer</p>
+        <p>Chocaholic</p>
       </div>
     </div>
+
     <div class="people-card">
       <div class="photographer-avatar">
         <%= cl_image_tag("amina", width: 100, height: 100, crop: :thumb, gravity: :face) %>
+        <div class="overlay">
+          <%= cl_image_tag("kebab", width: 100, height: 100, crop: :thumb, gravity: :face) %>
+        </div>
       </div>
       <div class="people-info">
         <h3>Amina</h3>
+        <p>Developer</p>
         <p>Kebab Enthusiast</p>
       </div>
     </div>
+
     <div class="people-card">
       <div class="photographer-avatar">
         <%= cl_image_tag("alisa", width: 100, height: 100, crop: :thumb, gravity: :face) %>
+        <div class="overlay">
+          <%= cl_image_tag("potato", width: 100, height: 100, crop: :thumb, gravity: :face) %>
+        </div>
       </div>
       <div class="people-info">
         <h3>Alisa</h3>
-        <p>Head of Design // Potato Lover</p>
+        <p>Head of Design</p>
+        <p>Potato Lover</p>
       </div>
     </div>
   </div>
