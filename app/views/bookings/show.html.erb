@@ -3,7 +3,7 @@
     <h1 id="confirmation-header">You've Snapped Up A Good One!</h1>
     <div class="confirmation-container">
       <h3>Great news, you have a booking with <%= @booking.photographer.user.first_name.capitalize %>.</h2>
-      <%= cl_image_tag @booking.photographer.avatar, height: 100, width: 100, crop: :thumb, class: "photographer-avatar" %>
+      <%= cl_image_tag @booking.photographer.avatar, height: 100, width: 100, crop: :thumb, class: "confirmation-avatar" %>
       <div class="order-details">
         <h4>Date: <%= @booking.date %></h4>
         <h4>Location: <%= @booking.location.capitalize %></h4>

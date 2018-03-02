@@ -18,6 +18,16 @@
 //   border: 1px solid #D8D8D6;
 }
 
+.message-avatar {
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.confirmation-avatar {
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
 .message-body {
   flex-grow: 1;
   padding-left: 30px;
@@ -28,7 +38,7 @@
   margin-bottom: 0px;
   padding-left: 10px;
   /*font-weight: bold;*/
-  min-width: 100px;
+  min-width: 200px;
   margin: 0px;
   text-align: center;
 }
