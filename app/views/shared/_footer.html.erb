@@ -4,15 +4,15 @@
 
     <h3>OH SNAP!</h3>
 
-    <p class="footer-links">
-      <a href="#">Home</a>
-      ·
-      <a href="#">About</a>
-      ·
-      <a href="#">Team</a>
-      ·
-      <a href="#">Dashboard</a>
-    </p>
+    <div class="footer-links">
+     <%= link_to "Home", root_path %>
+     ·
+     <%= link_to "About", root_path + "#home-box" %>
+     ·
+     <%= link_to "Team", root_path + "#people" %>
+     ·
+     <%= link_to "Dashboard", bookings_path %>
+    </div>
 
     <p class="footer-company-name">Oh snap! &copy; 2018</p>
   </div>
