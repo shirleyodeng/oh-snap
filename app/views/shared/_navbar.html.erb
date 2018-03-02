@@ -1,14 +1,17 @@
+<div class="navbar-snap">
+  <div class="navbar-name">
+    <% if user_signed_in? %>
+      <% if current_user.is_photographer? %>
+        <div id="navbar-hello">Hello <%= link_to current_user.first_name.capitalize, photographer_path(current_user.photographer_id), id: "navbar-hello" %>!</div>
+      <% else %>
+        <div id="navbar-hello">Hello <%= current_user.first_name.capitalize %>!</div>
+      <% end %>
+    <% end %>
+  </div>
+
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to "OH SNAP!", root_path, id: "navbar-logo" %>
-
-  <% if user_signed_in? %>
-    <% if current_user.is_photographer? %>
-      <div id="navbar-hello">Hello <%= link_to current_user.first_name.capitalize, photographer_path(current_user.photographer_id), id: "navbar-hello" %>!</div>
-    <% else %>
-      <div id="navbar-hello">Hello <%= current_user.first_name.capitalize %>!</div>
-    <% end %>
-  <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -60,4 +63,5 @@
       </ul>
     </div>
   </div>
+</div>
 </div>

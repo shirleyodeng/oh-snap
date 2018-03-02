@@ -1,9 +1,24 @@
 /* Main navbar */
-.navbar-wagon {
+.navbar-snap {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
   height: 50px;
   padding: 0px 30px;
+  position: relative;
+}
+
+.navbar-name {
+  position: absolute;
+  left: 47.5%;
+  margin-top: 20px;
+  vertical-align: middle;
+}
+
+.navbar-wagon {
+  // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  // background: white;
+  // height: 50px;
+  // padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,7 +61,9 @@
   color: black;
   font-size: 14px;
   letter-spacing: 2px;
+  margin-top: 15px;
 }
+
 .navbar-wagon-link:hover {
   color: $blue;
   text-decoration: none;
