@@ -1,0 +1,50 @@
+.search-btn {
+  font-weight: normal;
+  color: white;
+  padding: 2px 15px;
+  border-radius: 4px;
+  background-color: $blue;
+  opacity: 1;
+  margin-bottom: 10px;
+  &:hover {
+    opacity: 0.8;
+    background: $blue;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.btn-blue {
+  font-weight: normal;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: $blue;
+  opacity: 1;
+  margin-bottom: 10px;
+  &:hover {
+    opacity: 0.8;
+    background: $blue;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.btn-orange {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: $peach;
+  opacity: 1;
+  &:hover {
+    opacity: 0.8;
+    background: $orange;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+
+.confirmation-btn {
+  margin-top: 50px;
+}

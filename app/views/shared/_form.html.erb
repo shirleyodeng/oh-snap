@@ -1,5 +1,5 @@
 <%= simple_form_for(@photographer) do |f| %>
-  <label class="btn-another-booking">
+  <label class="btn-blue">
     + Profile Photo
     <span style="display: none">
     <%= f.input :avatar %>
@@ -10,7 +10,7 @@
   <%= f.input :category, label: false, prompt: "Category", collection: [ "Weddings", "Birthdays", "Graduation", "Event", "Fashion", "Portrait", "New born", "Pets"] %>
   <%= f.input :city, label: false, placeholder: 'Your city' %>
   <%= f.input :hourly_rate, label: false, placeholder: 'Hourly rate' %>
-  <label class="btn-another-booking">
+  <label class="btn-blue">
     + Up to 5 Portfolio Images
     <span style="display: none">
       <%= f.fields_for :photos do |p| %>
@@ -18,7 +18,7 @@
       <% end %>
     </span>
   </label>
-  <label class="btn-another-booking">
+  <label class="btn-blue">
     Submit
     <span style="display: none">
     <%= f.submit %>

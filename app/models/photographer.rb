@@ -1,4 +1,14 @@
 class Photographer < ApplicationRecord
+  include PgSearch
+  pg_search_scope :global_search,
+    against: [ :category, :city ],
+    associated_against: {
+      user: [ :first_name, :last_name ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
+
   belongs_to :user
   has_many :bookings
   has_many :photos, dependent: :destroy
@@ -7,8 +17,4 @@ class Photographer < ApplicationRecord
   validates :city, presence: true
   validates :hourly_rate, presence: true
   validates :category, presence: true, inclusion: { in: [ "Weddings", "Birthdays", "Graduation", "Event", "Fashion", "Portrait", "New born", "Pets"] }
-
-  def self.search(search)
-    where("city LIKE ?", "%#{search}%")
-  end
 end

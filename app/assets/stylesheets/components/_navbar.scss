@@ -1,4 +1,3 @@
-/* Main navbar */
 .navbar-snap {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
@@ -9,16 +8,12 @@
 
 .navbar-name {
   position: absolute;
-  left: 47.5%;
+  left: 45%;
   margin-top: 20px;
   vertical-align: middle;
 }
 
 .navbar-wagon {
-  // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  // background: white;
-  // height: 50px;
-  // padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
