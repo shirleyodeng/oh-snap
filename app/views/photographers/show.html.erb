@@ -37,7 +37,7 @@
         <p><%=@photographer.description%></p>
         <p><strong>Location: </strong><%= @photographer.city %></p>
         <p><strong>Hourly rate: </strong>£<%= @photographer.hourly_rate %></p>
-        <p><strong>Specialise in: </strong><%= @photographer.category %></p>
+        <%= cl_image_tag(@photographer.category) %>
       </div>
     </div>
 
