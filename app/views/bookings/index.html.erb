@@ -41,12 +41,10 @@
     <p class="light-text"><%= booking.user.email %></p>
   </div>
   <div class ="message-body">
-    <p>
-      <strong>Booking location: <%= booking.location.capitalize %></strong>
-      <p>Date: <%= booking.date %></p>
-      <p>Number of hours: <%= booking.hours %></p>
-      <p>Total booking fee: £<%= booking.photographer.hourly_rate * booking.hours %></p>
-    </p>
+    <p><strong>Booking Location:</strong> <%= booking.location.capitalize %></p>
+    <p><strong>Date:</strong> <%= booking.date %></p>
+    <p><strong>Number of hours:</strong> <%= booking.hours %></p>
+    <p><strong>Total booking fee:</strong> £<%= booking.photographer.hourly_rate * booking.hours %></p>
     <!-- <p class="light-text"><%= booking.photographer.description %></p> -->
   </div>
   <div class ="message-status">

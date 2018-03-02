@@ -5,9 +5,9 @@
       <h3>Great news, you have a booking with <%= @booking.photographer.user.first_name.capitalize %>.</h2>
       <%= cl_image_tag @booking.photographer.avatar, height: 100, width: 100, crop: :thumb, class: "confirmation-avatar" %>
       <div class="order-details">
-        <h4>Date: <%= @booking.date %></h4>
-        <h4>Location: <%= @booking.location.capitalize %></h4>
-        <h4>Booking total: £<%= @booking.photographer.hourly_rate * @booking.hours %></h4>
+        <h4><strong>Date:</strong> <%= @booking.date %></h4>
+        <h4><strong>Location:</strong> <%= @booking.location.capitalize %></h4>
+        <h4><strong>Booking total:</strong> £<%= @booking.photographer.hourly_rate * @booking.hours %></h4>
       </div>
     </div>
     <div class="confirmation-btn">
