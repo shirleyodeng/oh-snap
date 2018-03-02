@@ -105,11 +105,18 @@ body {
   }
 }
 
-.photographer-avatar {
+.team-avatar {
   position: relative;
-  border-radius: 50%;
-}
-
+  padding: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px 50px;
+  }
+  
 .overlay {
   position: absolute;
   top: 0;
@@ -121,7 +128,7 @@ body {
   padding: 10px;
 }
 
-.photographer-avatar:hover .overlay {
+.team-avatar:hover .overlay {
   opacity: 1;
 }
 
