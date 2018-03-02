@@ -7,7 +7,10 @@
 </div>
 
 <% if @photographers.blank? %>
-  <h3>There are no photographers located in <%= params[:search] %>.</h3>
+  <div class="search-error text-center">
+    <h4>ISO sorry, there are no photographers who match your search (<%= params[:search] %>).</h4>
+    <h4>Please try again.</h4>
+  </div>
 
 <% else  %>
 
