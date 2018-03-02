@@ -6,7 +6,7 @@
       <%= cl_image_tag @booking.photographer.avatar, height: 100, width: 100, crop: :thumb, class: "photographer-avatar" %>
       <div class="order-details">
         <h4>Date: <%= @booking.date %></h4>
-        <h4>Location: <%= @booking.location %></h4>
+        <h4>Location: <%= @booking.location.capitalize %></h4>
         <h4>Booking total: £<%= @booking.photographer.hourly_rate * @booking.hours %></h4>
       </div>
     </div>

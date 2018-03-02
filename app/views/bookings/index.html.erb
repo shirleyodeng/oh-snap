@@ -13,7 +13,7 @@
   </div>
   <div class ="message-body">
     <p>
-      <strong>Booking location: <%= booking.location %></strong>
+      <strong>Booking location: <%= booking.location.capitalize %></strong>
       <p>Date: <%= booking.date %></p>
       <p>Number of hours: <%= booking.hours %></p>
       <p>Total booking fee: £<%= booking.photographer.hourly_rate * booking.hours %></p>
@@ -48,7 +48,7 @@
   </div>
   <div class ="message-body">
     <p>
-      <strong>Booking location: <%= booking.location %></strong>
+      <strong>Booking location: <%= booking.location.capitalize %></strong>
       <p>Date: <%= booking.date %></p>
       <p>Number of hours: <%= booking.hours %></p>
       <p>Total booking fee: £<%= booking.photographer.hourly_rate * booking.hours %></p>
