@@ -31,9 +31,16 @@
   padding-top: 20px;
 }
 
-.photographer-avatar {
-  border-radius: 50%;
+.search-photos {
+  position: relative;
 }
+
+/*.photographer-avatar {
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 0px;
+  margin-right: 0px;
+}*/
 
 .btn-another-booking {
   font-weight: normal;
