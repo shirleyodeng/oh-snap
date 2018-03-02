@@ -8,7 +8,7 @@
  <li class="message">
   <img src= <%= cl_image_path booking.photographer.avatar %> class="avatar-dashboard"/>
   <div class="message-name">
-    <h4> <%= booking.photographer.user.first_name %></h4>
+    <h4> <%= link_to booking.photographer.user.first_name, photographer_path(booking.photographer) %></h4>
     <p class="light-text"><%= booking.photographer.user.email %></p>
   </div>
   <div class ="message-body">
@@ -31,6 +31,7 @@
       </div>
       <% end %>
     </div>
+
   </li>
 </ul>
 
