@@ -100,6 +100,8 @@ body {
   font-style: italic;
   font-weight: 500;
   font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   }
 }
 
@@ -122,3 +124,11 @@ body {
 .photographer-avatar:hover .overlay {
   opacity: 1;
 }
+
+.people-info p {
+  margin: 0;
+}
+
+.people-description {
+  font-size: 16px;
+  }
