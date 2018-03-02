@@ -33,7 +33,7 @@
         <%= cl_image_tag @photographer.avatar, height: 100, width: 100, crop: :thumb, gravity: :face %>
       </div>
 
-      <div class="photographer-information">
+      <div class="photographer-information text-center">
         <p><%=@photographer.description%></p>
         <p><strong>Location: </strong><%= @photographer.city %></p>
         <p><strong>Hourly rate: </strong>£<%= @photographer.hourly_rate %></p>
