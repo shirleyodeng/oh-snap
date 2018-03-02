@@ -41,18 +41,20 @@
       </div>
     </div>
 
-    <div class="booking-form">
+    <div class= "booking-form">
       <h3>BOOK ME</h3>
-      <%= simple_form_for [@photographer, @booking] do |f| %>
-        <%= f.datetime_field :date, order: [:day, :month, :year] %>
-        <%= f.input :hours %>
-        <%= f.input :location %>
+      <p>Date and time:</p>
+        <%= simple_form_for [@photographer, @booking] do |f| %>
+        <%= f.input :date,label: false %>
+        <p>Number of hours:</p>
+        <%= f.input :hours, label: false %>
+        <p>Location:</p>
+        <%= f.input :location,label:false %>
         <%= f.submit class: "btn-orange" %>
       <% end %>
     </div>
   </div>
 </div>
-
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog modal-md">
     <div class="modal-content">
