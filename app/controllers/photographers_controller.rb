@@ -4,8 +4,8 @@ class PhotographersController < ApplicationController
 
   def index
     @photographers = policy_scope(Photographer)
-    if params[:search]
-      @photographers = Photographer.search(params[:search].capitalize).order("created_at DESC")
+    if params[:search].present?
+      @photographers = Photographer.global_search(params[:search]).order("created_at DESC")
     else
       @photographers = Photographer.all.order("created_at DESC")
     end
