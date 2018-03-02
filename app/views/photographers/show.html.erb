@@ -11,6 +11,10 @@
 
   <div class="photographer-info-container text-center">
     <div class="photographer-bio">
+      <%= link_to photographers_path do %>
+        <div class="back-arrow"><i class="fas fa-angle-double-left"></i></div>
+      <% end %>
+
       <div class="photographer-name">
         <h3>
           <%= @photographer.user.first_name.upcase%> <%=@photographer.user.last_name.upcase%>
@@ -40,7 +44,7 @@
     <div class="booking-form">
       <h3>BOOK ME</h3>
       <%= simple_form_for [@photographer, @booking] do |f| %>
-        <%= f.input :date, order: [:day, :month, :year] %>
+        <%= f.datetime_field :date, order: [:day, :month, :year] %>
         <%= f.input :hours %>
         <%= f.input :location %>
         <%= f.submit class: "btn-orange" %>
