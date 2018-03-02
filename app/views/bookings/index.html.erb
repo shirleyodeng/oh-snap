@@ -1,37 +1,31 @@
-
-
 <h2 class="spacing text-center">BOOKINGS</h2>
 <ul class="inbox">
- <% count = 0 %>
- <% @bookings.each do |booking| %>
- <% if booking.user == current_user %>
- <li class="message">
-  <img src= <%= cl_image_path booking.photographer.avatar %> class="avatar-dashboard"/>
-  <div class="message-name">
-    <h4> <%= link_to booking.photographer.user.first_name, photographer_path(booking.photographer) %></h4>
-    <p class="light-text"><%= booking.photographer.user.email %></p>
-  </div>
-  <div class ="message-body">
-    <p>
-      <strong>Booking location: <%= booking.location %></strong>
-      <p>Date: <%= booking.date %></p>
-      <p>Number of hours: <%= booking.hours %></p>
-      <p>Total booking fee: £<%= booking.photographer.hourly_rate * booking.hours %></p>
-    </p>
-    <!-- <p class="light-text"><%= booking.photographer.description %></p> -->
-  </div>
-  <div class ="message-status">
-    <p class="status-pending"><%= link_to "x", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete, id: 'btn-blue' %><p>
-      <% count += 1 %>
-      <% end %>
-      <% end %>
-      <% if count == 0 %>
-      <div>
-        <p class="no-booking"> You have no bookings... <%= link_to "book",photographers_path %> an amazing photographer for your event!</p>
-      </div>
-      <% end %>
+  <% count = 0 %>
+  <% @bookings.each do |booking| %>
+    <% if booking.user == current_user %>
+      <li class="message">
+        <%= cl_image_tag booking.photographer.avatar, height: 100, width: 100, crop: :thumb, class: "message-avatar" %>
+        <div class="message-name">
+          <h4><%= link_to booking.photographer.user.first_name, photographer_path(booking.photographer) %></h4>
+          <p class="light-text"><%= booking.photographer.user.email %></p>
+        </div>
+        <div class ="message-body">
+          <p><strong>Location:</strong> <%= booking.location.capitalize %></p>
+          <p><strong>Date:</strong> <%= booking.date %></p>
+          <p><strong>Number of hours:</strong> <%= booking.hours %></p>
+          <p><strong>Total booking fee:</strong> £<%= booking.photographer.hourly_rate * booking.hours %></p>
+        </div>
+        <div class ="message-status">
+          <p class="status-pending"><%= link_to "x", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete, id: 'btn-blue' %><p>
+          <% count += 1 %>
+    <% end %>
+  <% end %>
+  <% if count == 0 %>
+    <div>
+      <p class="no-booking text-center"> You have no bookings.. <%= link_to "book",photographers_path %> an amazing photographer for your event!</p>
     </div>
-
+  <% end %>
+  </div>
   </li>
 </ul>
 
@@ -48,7 +42,7 @@
   </div>
   <div class ="message-body">
     <p>
-      <strong>Booking location: <%= booking.location %></strong>
+      <strong>Booking location: <%= booking.location.capitalize %></strong>
       <p>Date: <%= booking.date %></p>
       <p>Number of hours: <%= booking.hours %></p>
       <p>Total booking fee: £<%= booking.photographer.hourly_rate * booking.hours %></p>
@@ -62,11 +56,11 @@
       <% end %>
       <% if count == 0 %>
       <div>
-        <p class="no-booking">You have no bookings...
+        <p class="no-booking text-center">You have no jobs..
           <% if current_user.is_photographer? %>
-            <%= link_to "update ", photographer_path(current_user.photographer_id) %>your photographer profile and start earning today!</p>
+            <%= link_to "update", photographer_path(current_user.photographer_id) %> your photographer profile and start earning today!</p>
           <% else %>
-            <%= link_to "become ", new_photographer_path %>a photographer  and start earning today!</p>
+            <%= link_to "become", new_photographer_path %> a photographer and start earning today!</p>
           <% end %>
       </div>
      <% end %>
