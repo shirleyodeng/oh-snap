@@ -24,7 +24,7 @@
                 <%= cl_image_tag photographer.avatar, height: 50, width: 50, crop: :thumb, gravity: :face, class: "search-avatar" %>
                 <h3><%= photographer.user.first_name %> <%= photographer.user.last_name %></h3>
                 <p><capitalize><%= photographer.city %></capitalize></p>
-                <p><%= cl_image_tag photographer.category %></p>
+                <p><%= cl_image_tag(photographer.category) %></p>
                 <p>£<%= photographer.hourly_rate %>/Hour</p>
                 <% rand(3..5).times do %>
                   <%= cl_image_tag("star") %>
