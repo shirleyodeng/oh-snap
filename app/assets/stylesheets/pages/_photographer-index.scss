@@ -2,6 +2,10 @@
   min-height: 80vh;
 }
 
+.container.fill-high {
+  margin-top: 30px;
+}
+
 .search {
   h1 {
     text-align: center;
@@ -14,19 +18,14 @@
   padding: 10px;
 }
 
-.bar {
-  background-color: $blue;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
 .search-results-card {
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
   letter-spacing: 2px;
   background-color: white;
-  width: 360px;
+  width: 205px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
 }
 
 form {
@@ -40,6 +39,26 @@ form {
 .search-gallery {
   background-size: cover;
   width: 200px;
-  height: 200px;
+  height: 100px;
 }
 
+.search-avatar {
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-information {
+  h3 {
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-top: 0px;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+}
+
+.card-link{
+  margin-top: 5px;
+}
