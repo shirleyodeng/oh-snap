@@ -37,7 +37,10 @@
         <p><%=@photographer.description%></p>
         <p><strong>Location: </strong><%= @photographer.city %></p>
         <p><strong>Hourly rate: </strong>£<%= @photographer.hourly_rate %></p>
-        <%= cl_image_tag(@photographer.category) %>
+        <p><%= cl_image_tag(@photographer.category) %></p>
+        <p><% rand(3..5).times do %>
+          <%= cl_image_tag("star") %>
+        <% end %></p>
       </div>
     </div>
 
