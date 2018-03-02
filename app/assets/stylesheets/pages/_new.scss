@@ -14,6 +14,11 @@ color: #FFB872;
 
 .spacing {
   letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.spacing.blue-font.text-center {
+  margin-bottom: 0px;
 }
 
 // DO NOT DO CSS ON THE CONTAINER

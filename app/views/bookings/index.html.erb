@@ -8,7 +8,7 @@
  <li class="message">
   <img src= <%= cl_image_path booking.photographer.avatar %> class="avatar-dashboard"/>
   <div class="message-name">
-    <h4> <%= booking.photographer.user.first_name %></h4>
+    <h4> <%= link_to booking.photographer.user.first_name, photographer_path(booking.photographer) %></h4>
     <p class="light-text"><%= booking.photographer.user.email %></p>
   </div>
   <div class ="message-body">
@@ -21,7 +21,7 @@
     <!-- <p class="light-text"><%= booking.photographer.description %></p> -->
   </div>
   <div class ="message-status">
-    <p class="status-pending"><%= link_to "x", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete, class: 'btn-blue' %><p>
+    <p class="status-pending"><%= link_to "x", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete, id: 'btn-blue' %><p>
       <% count += 1 %>
       <% end %>
       <% end %>
@@ -31,6 +31,7 @@
       </div>
       <% end %>
     </div>
+
   </li>
 </ul>
 
@@ -55,7 +56,7 @@
     <!-- <p class="light-text"><%= booking.photographer.description %></p> -->
   </div>
   <div class ="message-status">
-    <p class="status-pending"><%= link_to "x", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete, class: 'btn-blue' %><p>
+    <p class="status-pending"><%= link_to "x", photographer_booking_path(photographer_id: booking.photographer.id, id: booking.id), method: :delete, id: 'btn-blue' %><p>
       <% count += 1 %>
       <% end %>
       <% end %>
