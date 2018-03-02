@@ -28,8 +28,9 @@
 .search-results-card {
   text-align: center;
   letter-spacing: 2px;
-  background-color: white;
-  width: 202px;
+  background-color: rgb(253, 253, 253);
+  width: 219px;
+  height: 320px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
@@ -49,15 +50,15 @@ form {
 
 .search-gallery {
   background-size: cover;
-  width: 200px;
-  height: 100px;
+  width: 219px;
+  height: 110px;
 }
 
 .search-avatar {
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -25px;
+  margin-top: -33px;
 }
 
 .search-information {

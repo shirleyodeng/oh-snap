@@ -46,8 +46,8 @@
 
     <div class= "booking-form">
       <h3>BOOK ME</h3>
-      <p>Date and time:</p>
         <%= simple_form_for [@photographer, @booking] do |f| %>
+        <p>Date and time:</p>
         <%= f.input :date,label: false %>
         <p>Number of hours:</p>
         <%= f.input :hours, label: false %>
@@ -56,6 +56,7 @@
         <%= f.submit class: "btn-orange" %>
       <% end %>
     </div>
+
   </div>
 </div>
 <div class="modal fade" id="myModal" role="dialog">

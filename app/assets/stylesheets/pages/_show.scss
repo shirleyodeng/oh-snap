@@ -17,9 +17,11 @@
 .photographer-name {
   text-align: center;
   font-size: 40px;
-  margin-bottom: 20px;
   font-weight: 500;
   letter-spacing: 2px;
+  h3 {
+    margin-bottom: 0px;
+  }
 }
 
 .photographer-info-container {
@@ -84,7 +86,7 @@
 
 .booking-form {
   padding: 20px;
-  width: 450px;
+  width: 470px;
   letter-spacing: 2px;
   h3 {
     font-size: 28px;
@@ -92,6 +94,9 @@
     text-align: center;
     font-weight: 500;
     letter-spacing: 2px;
+  }
+  p {
+    margin-bottom: 5px;
   }
 }
 
